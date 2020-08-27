@@ -1,6 +1,8 @@
+// Import Firebase and Auth module
 import * as firebase from 'firebase/app';
 import 'firebase/auth';
 
+// Initialize Firebase App and pass all the field from react app config
 const firebaseApp = firebase.initializeApp({
     apiKey: process.env.REACT_APP_FIREBASE_KEY,
     authDomain: process.env.REACT_APP_FIREBASE_DOMAIN,

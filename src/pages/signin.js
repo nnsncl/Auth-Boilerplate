@@ -6,12 +6,15 @@ import { AuthContext } from '../auth/Auth';
 
 const SignIn = ({ history }) => {
     const handleSignIn = useCallback(
+    // useCallback is used to memoize callbacks
         async event => {
             event.preventDefault();
+            // Avoid page reload on sumbit
             const { email, password } = event.target.elements;
 
             try {
                 await firebaseApp
+                    // Call signInWithEmailAndPassword function from Firebase API and pass in email and password values
                     .auth()
                     .signInWithEmailAndPassword(email.value, password.value);
                 history.push('/');
@@ -23,10 +26,12 @@ const SignIn = ({ history }) => {
     );
 
     const { currentUser } = useContext(AuthContext);
+    // Use the Providers datas to track if the user is authenticated
 
     if (currentUser) {
         return <Redirect to='/' />;
     }
+    // If the user is authenticated, redirect the the Private route
 
     return (
         <div>
