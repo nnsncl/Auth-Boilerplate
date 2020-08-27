@@ -1,8 +1,16 @@
 # Auth-Boilerplate
-Auth boilerplate using React and Firebase
+Auth Boilerplate using React and Firebase
 
-Components are builted with the Compound Components method (https://kentcdodds.com/blog/compound-components-with-react-hooks).
-Syles are made with styled-component (https://styled-components.com/).
+Create an .env file at the root of the project which include configuration provided by Firebase
+
+`
+REACT_APP_FIREBASE_KEY=""
+REACT_APP_FIREBASE_DOMAIN=""
+REACT_APP_FIREBASE_DATABASE=""
+REACT_APP_FIREBASE_PROJECT_ID=""
+REACT_APP_FIREBASE_STORAGE_BUCKET=""
+REACT_APP_FIREBASE_SENDER_ID=""
+`
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
