@@ -1,5 +1,6 @@
 import React, { useCallback } from 'react';
 import { withRouter } from 'react-router';
+import { Link } from 'react-router-dom';
 import firebaseApp from '../firebase';
 
 const SignUp = ({ history }) => {
@@ -27,6 +28,7 @@ const SignUp = ({ history }) => {
                 <input name='password' type='password' placeholder='Password' />
                 <button type='submit' >Sign Up</button>
             </form>
+            <Link to='/signin' >Sign In</Link>
         </div>
     );
 };
