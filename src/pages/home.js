@@ -1,5 +1,5 @@
-import React from 'react'
-import firebaseApp from '../firebase'
+import React from 'react';
+import firebaseApp from '../firebase';
 
 export default function Home() {
     return (
@@ -7,5 +7,5 @@ export default function Home() {
             <h1>Home</h1>
             <button onClick={() => firebaseApp.auth().signOut()} >Sign out</button>
         </>
-    )
-}
+    );
+};
